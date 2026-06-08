@@ -8,6 +8,24 @@
   from { transform: translateX(0); }
   to   { transform: translateX(-50%); }
 }
+
+@keyframes revealUp {
+  0% {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-reveal {
+  animation: revealUp 1s ease forwards;
+  will-change: transform, opacity;
+}
+
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -15,6 +33,15 @@
   --font-mono: var(--font-geist-mono);
    --keyframes-marquee-from: translateX(0);
   --keyframes-marquee-to: translateX(-50%);
+    --keyframes-revealUp-0: {
+    opacity: 0;
+    transform: translateY(60px);
+  };
+
+  --keyframes-revealUp-100: {
+    opacity: 1;
+    transform: translateY(0);
+  };
 }
 
 @media (prefers-color-scheme: dark) {
