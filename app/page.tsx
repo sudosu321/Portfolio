@@ -89,7 +89,7 @@ export default function Home() {
         <div className="flex items-end justify-center md:justify-end md:ml-auto md:pr-20">
           <div className="relative rounded-[2rem] overflow-hidden w-[420px] md:w-[420px] aspect-[4/5] transition-transform duration-500 hover:scale-105 shadow-[0_32px_64px_rgba(216,90,48,0.25)]">
             <Image
-              src="/Mime.png"
+              src="/works/Events/4.png"
               alt="Srijan Shubh"
               fill
               className="object-cover transition-transform duration-300 hover:scale-105"
