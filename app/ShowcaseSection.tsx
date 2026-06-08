@@ -235,17 +235,16 @@ export default function ShowcaseSection() {
         </div>
 
         {/* Content */}
-        <div className="grid grid-cols-[1fr_260px] gap-6 items-start">
+        <div className="w-full">
 
           {/* Main display — click opens lightbox */}
           <button
             onClick={() => setLightboxIdx(activeImg)}
-            className="relative rounded-[1.5rem] overflow-hidden max-w-2xl bg-[#1a1612] shadow-[0_24px_60px_rgba(26,22,18,0.15)] group cursor-zoom-in text-left"
+            className="relative rounded-[1.5rem] overflow-hidden w-full bg-[#1a1612] shadow-[0_24px_60px_rgba(26,22,18,0.15)] group cursor-zoom-in text-left"
             style={{ aspectRatio: "4/3" }}
             aria-label="Open full screen"
           >
             {isVideo(activeWork.file) ? (
-              /* Videos: don't hijack click for lightbox — let controls work */
               <video
                 key={activeWork.file}
                 src={`/works/${activeWork.file}`}
@@ -284,58 +283,19 @@ export default function ShowcaseSection() {
             </div>
           </button>
 
-          {/* Thumbnail stack */}
-          <div className="flex flex-col gap-4 max-w-36">
-            {current.works.map((w, i) => (
+          {/* dot indicators */}
+          <div className="flex justify-center gap-2 mt-5">
+            {current.works.map((_, i) => (
               <button
-                key={w.file}
+                key={i}
                 onClick={() => setActiveImg(i)}
-                onDoubleClick={() => setLightboxIdx(i)}
-                className={`relative rounded-2xl overflow-hidden bg-[#1a1612] border-2 transition-all duration-200 cursor-pointer w-full ${
+                className={`h-1.5 rounded-full transition-all duration-200 ${
                   activeImg === i
-                    ? "border-[#D85A30] scale-[1.02]"
-                    : "border-transparent opacity-60 hover:opacity-90 hover:scale-[1.01]"
+                    ? "w-5 bg-[#D85A30]"
+                    : "w-1.5 bg-black/20 hover:bg-black/40"
                 }`}
-                style={{ aspectRatio: "4/3" }}
-                aria-label={`View item ${i + 1}`}
-                title="Click to select · Double-click to open"
-              >
-                {isVideo(w.file) ? (
-                  <video
-                    src={`/works/${w.file}`}
-                    className="absolute inset-0 w-full h-full object-cover"
-                    muted
-                    playsInline
-                    preload="metadata"
-                  />
-                ) : (
-                  <Image
-                    src={`/works/${w.file}`}
-                    alt={w.title}
-                    fill
-                    className="object-cover"
-                  />
-                )}
-                {activeImg === i && (
-                  <div className="absolute inset-0 ring-2 ring-[#D85A30] rounded-2xl pointer-events-none" />
-                )}
-              </button>
+              />
             ))}
-
-            {/* dot indicators */}
-            <div className="flex justify-center gap-2 mt-2">
-              {current.works.map((_, i) => (
-                <button
-                  key={i}
-                  onClick={() => setActiveImg(i)}
-                  className={`h-1.5 rounded-full transition-all duration-250 ${
-                    activeImg === i
-                      ? "w-5 bg-[#D85A30]"
-                      : "w-1.5 bg-black/20 hover:bg-black/40"
-                  }`}
-                />
-              ))}
-            </div>
           </div>
         </div>
 
