@@ -11,7 +11,7 @@ const skills = [
 ];
 
 const marqueeItems = [
-  "Merh Design", "Adobe Photoshop", "UI/UX",
+  "Merch Design", "Adobe Photoshop", "UI/UX",
   "Typography", "Video Editing",
 ];
 
