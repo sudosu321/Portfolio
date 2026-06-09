@@ -39,16 +39,21 @@ export default function Home() {
 
         {/* Desktop links */}
         <ul className="hidden md:flex gap-10 list-none items-center">
-          {["Resume"].map((item) => (
-            <li key={item}>
-              <a href="/works/resume.pdf" target="_blank" className="text-[0.72rem] font-black text-black uppercase tracking-[0.2em] hover:opacity-50 transition-opacity no-underline">
-                {item}
+          
+            <li >
+              <a href="#about" className="text-[0.72rem] font-black text-black uppercase tracking-[0.2em] hover:opacity-50 transition-opacity no-underline">
+                About
               </a>
             </li>
-          ))}
+            <li >
+              <a href="/works/resume.pdf" target="_blank" className="text-[0.72rem] font-black text-black uppercase tracking-[0.2em] hover:opacity-50 transition-opacity no-underline">
+                Resume
+              </a>
+            </li>
+          
           <li>
             <a href="https://www.linkedin.com/in/srijanshubh/" target="_blank" className="text-[0.72rem] font-black bg-black text-white px-6 py-2.5 uppercase tracking-[0.15em] hover:bg-white hover:text-black border-2 border-black transition-colors no-underline">
-              LinkedIn ↗
+              Contact
             </a>
           </li>
         </ul>
@@ -56,8 +61,11 @@ export default function Home() {
         {/* Mobile dropdown */}
         {menuOpen && (
           <div className="md:hidden absolute top-full left-0 right-0 bg-white border-b-2 border-black px-6 py-6 flex flex-col gap-5">
-            <a href="#" className="text-[0.72rem] font-black text-black uppercase tracking-[0.2em] hover:opacity-50 transition-opacity no-underline">
+            <a href="#about" className="text-[0.72rem] font-black text-black uppercase tracking-[0.2em] hover:opacity-50 transition-opacity no-underline">
               About
+            </a>
+            <a href="/works/resume.pdf" target="_blank" className="text-[0.72rem] font-black text-black uppercase tracking-[0.2em] hover:opacity-50 transition-opacity no-underline">
+              Resume
             </a>
             <a href="https://www.linkedin.com/in/srijanshubh/" target="_blank" className="text-[0.72rem] font-black bg-black text-white px-6 py-2.5 uppercase tracking-[0.15em] hover:bg-white hover:text-black border-2 border-black transition-colors no-underline text-center">
               LinkedIn ↗
@@ -129,7 +137,7 @@ export default function Home() {
       <ShowcaseSection />
 
       {/* ── ABOUT ── */}
-      <section className="bg-black text-white grid grid-cols-1 md:grid-cols-2 border-t-2 border-white/10">
+      <section id="about" className="bg-black text-white grid grid-cols-1 md:grid-cols-2 border-t-2 border-white/10">
         {/* Left — text */}
         <div className="px-6 md:px-12 py-20 md:py-28 border-b-2 md:border-b-0 md:border-r-2 border-white/10">
           <div className="text-[0.62rem] font-black uppercase tracking-[0.25em] text-white/40 mb-4">
@@ -147,7 +155,7 @@ export default function Home() {
             Based in India · Working worldwide · Fluent in Adobe Creative Suite, Figma, and more.
           </p>
           <div className="mt-10">
-            <a href="https://www.linkedin.com/in/srijanshubh/" target="_blank" className="text-[0.65rem] font-black bg-white text-black px-6 py-3 uppercase tracking-[0.2em] hover:bg-black hover:text-white border-2 border-white transition-colors no-underline inline-block">
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=shubhsrijan15@gmail.com" target="_blank" className="text-[0.65rem] font-black bg-white text-black px-6 py-3 uppercase tracking-[0.2em] hover:bg-black hover:text-white border-2 border-white transition-colors no-underline inline-block">
               Connect ↗
             </a>
           </div>
@@ -163,7 +171,7 @@ export default function Home() {
                 ${idx < 2 ? "border-b-2" : ""}
               `}
             >
-              <div className="font-black text-[3.5rem] leading-none text-white/10 group-hover:text-black/10 mb-4 tracking-[-0.04em]">
+              <div className="font-black text-[3.5rem] leading-none text-gray-200 group-hover:text-black/10 mb-4 tracking-[-0.04em]">
                 {s.icon}
               </div>
               <div className="text-[0.72rem] font-black uppercase tracking-[0.15em] text-white group-hover:text-black mb-1">{s.name}</div>
@@ -178,7 +186,7 @@ export default function Home() {
         <span className="font-black text-sm uppercase tracking-[0.2em]">Srijan Shubh</span>
         <span className="text-[0.65rem] text-black/40 text-center font-bold uppercase tracking-widest">© 2026 Srijan Shubh. All rights reserved.</span>
         <div className="flex gap-8">
-          <a href="" target="_blank" className="text-[0.65rem] font-black text-black/40 no-underline hover:text-black transition-colors uppercase tracking-widest">
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=shubhsrijan15@gmail.com" target="_blank" className="text-[0.65rem] font-black text-black/40 no-underline hover:text-black transition-colors uppercase tracking-widest">
             shubhsrijan15@gmail.com
           </a>
           

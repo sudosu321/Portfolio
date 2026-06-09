@@ -147,16 +147,41 @@ function Modal({
 
       {/* Prev / Next */}
       <button
-        className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 text-white font-black text-[0.65rem] uppercase tracking-[0.2em] border-2 border-white/30 w-10 h-10 flex items-center justify-center hover:bg-white hover:text-black transition-colors"
+        className="
+  absolute left-4 md:left-8 top-1/2 -translate-y-1/2
+  text-white font-black text-[0.65rem]
+  uppercase tracking-[0.2em]
+  bg-white/10 backdrop-blur-md
+  border border-white/40
+  shadow-[0_0_25px_rgba(255,255,255,0.25)]
+  w-12 h-12
+  flex items-center justify-center
+  hover:bg-white hover:text-black
+  hover:shadow-[0_0_40px_rgba(255,255,255,0.6)]
+  transition-all duration-300
+  "
         onClick={(e) => { e.stopPropagation(); onPrev(); }}
       >
-        ←
+        <h1>←</h1>
       </button>
       <button
-        className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 text-white font-black text-[0.65rem] uppercase tracking-[0.2em] border-2 border-white/30 w-10 h-10 flex items-center justify-center hover:bg-white hover:text-black transition-colors"
-        onClick={(e) => { e.stopPropagation(); onNext(); }}
-      >
-        →
+className="
+absolute right-4 md:right-8 top-1/2 -translate-y-1/2
+text-white font-black text-[0.65rem]
+uppercase tracking-[0.2em]
+bg-white/10 backdrop-blur-md
+border border-white/40
+shadow-[0_0_25px_rgba(255,255,255,0.25)]
+w-12 h-12
+flex items-center justify-center
+hover:bg-white hover:text-black
+hover:shadow-[0_0_40px_rgba(255,255,255,0.6)]
+hover:scale-110
+transition-all duration-300
+z-10
+"     onClick={(e) => { e.stopPropagation(); onNext(); }}
+      ><h1>→</h1>
+        
       </button>
 
       {/* Counter */}
@@ -194,7 +219,7 @@ export default function ShowcaseSection() {
 
       {/* Masonry grid */}
       <div className="px-8 md:px-16">
-        <div className="columns-1 sm:columns-2 md:columns-3 gap-4">
+        <div className="columns-2 sm:columns-2 md:columns-3 gap-4">
           {works.map((item, i) => (
             <div key={i} className="break-inside-avoid mb-4">
               <WorkItem item={item} onClick={() => openModal(i)} />
