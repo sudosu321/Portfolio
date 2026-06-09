@@ -24,7 +24,7 @@ export default function Home() {
 
       {/* ── NAV ── */}
       <nav className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-6 md:px-12 py-5 md:py-6 bg-white border-b-2 border-black">
-        <span className="font-black text-base tracking-[0.2em] uppercase">Srijan Shubh</span>
+        <span className="font-black text-base tracking-[0.2em] uppercase">Portfolio.</span>
 
         {/* Hamburger — mobile only */}
         <button
