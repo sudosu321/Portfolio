@@ -1,8 +1,7 @@
 "use client";
 import { useState } from "react";
 import ShowcaseSection from "./ShowcaseSection";
-import Image from "next/image";
-
+import HeroSlideshow from "./HeroSlideshow";
 const skills = [
   { icon: "01", name: "Adobe Photoshop", desc: "Photo editing, compositing, retouching" },
   { icon: "02", name: "Da Vinci", desc: "Video editing, Motion Design" },
@@ -105,20 +104,7 @@ export default function Home() {
 
                 {/* Right — photo */}
         <div className="hero-reveal delay-3 flex items-end justify-center md:justify-end z-10 px-6 md:px-12 pb-8 md:pb-12">
-          <div
-            className="relative w-full max-w-[600px] aspect-[4/3]"
-            style={{ filter: "grayscale(0%)" }}
-          >
-            <Image
-              src="/works/Events/1.png"
-              alt="Srijan Shubh"
-              fill
-              className="object-contain transition-transform duration-400 hover:scale-105"
-              priority
-            />
-
-            <div className="absolute inset-0 border-0 border-black pointer-events-none" />
-          </div>
+          <HeroSlideshow />
         </div>
       </section>
 
